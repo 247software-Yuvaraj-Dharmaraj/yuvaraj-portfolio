@@ -47,7 +47,7 @@ export default function Hero() {
             <a href="#projects" className="btn-primary">
               View my work <ArrowRight size={16} />
             </a>
-            <a href={profile.resumeUrl} target="_blank" rel="noreferrer" className="btn-ghost">
+            <a href={profile.resumeUrl} download="Yuvaraj_D_Resume.pdf" className="btn-ghost">
               <Download size={16} /> Download resume
             </a>
           </div>
