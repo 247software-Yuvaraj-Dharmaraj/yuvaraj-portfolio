@@ -100,7 +100,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'FitSphere API — Spring Boot',
+    name: 'FitSphere',
     tagline: 'Java backend — full rewrite of the Node API',
     description:
       'A Java / Spring Boot reimplementation of the FitSphere backend on Spring Data MongoDB, preserving the exact REST contract. Built to demonstrate enterprise Java with a document datastore alongside the MERN version.',
@@ -130,7 +130,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'IncidentDesk API — Spring Boot',
+    name: 'IncidentDesk',
     tagline: 'Java backend — full rewrite of the Node API',
     description:
       'A Java / Spring Boot reimplementation of the IncidentDesk backend, preserving the exact REST contract. Built to demonstrate enterprise Java alongside the MERN version.',
