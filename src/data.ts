@@ -121,6 +121,7 @@ export const projects: Project[] = [
       'A Java / Spring Boot reimplementation of the IncidentDesk backend, preserving the exact REST contract. Built to demonstrate enterprise Java alongside the MERN version.',
     image: '/projects/incidentdesk-springboot.png',
     tech: ['Java', 'Spring Boot', 'Spring Security', 'JPA / Hibernate', 'PostgreSQL', 'Flyway', 'Docker'],
+    live: 'https://incidentdesk-java.vercel.app',
     code: 'https://github.com/247software-Yuvaraj-Dharmaraj/incidentdesk-springboot',
     highlights: [
       'JWT cookie auth + role-based access control (Spring Security)',
