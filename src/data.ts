@@ -78,7 +78,7 @@ export interface Project {
   description: string;
   image: string;
   tech: string[];
-  live: string;
+  live?: string;
   code: string;
   highlights: string[];
 }
@@ -112,6 +112,20 @@ export const projects: Project[] = [
       'RBAC enforced across middleware, services & scoped queries',
       'Audit trail recorded inside DB transactions',
       'Cursor pagination, Zod validation, rate-limited auth',
+    ],
+  },
+  {
+    name: 'IncidentDesk API — Spring Boot',
+    tagline: 'Java backend — full rewrite of the Node API',
+    description:
+      'A Java / Spring Boot reimplementation of the IncidentDesk backend, preserving the exact REST contract. Built to demonstrate enterprise Java alongside the MERN version.',
+    image: '/projects/incidentdesk-springboot.png',
+    tech: ['Java', 'Spring Boot', 'Spring Security', 'JPA / Hibernate', 'PostgreSQL', 'Flyway', 'Docker'],
+    code: 'https://github.com/247software-Yuvaraj-Dharmaraj/incidentdesk-springboot',
+    highlights: [
+      'JWT cookie auth + role-based access control (Spring Security)',
+      'Audit trail in DB transactions; optimistic concurrency',
+      'Cursor pagination, Gemini AI triage, Socket.IO realtime',
     ],
   },
 ];

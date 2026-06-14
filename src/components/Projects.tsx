@@ -17,20 +17,32 @@ export default function Projects() {
         {projects.map((p, i) => (
           <Reveal key={p.name} delay={i * 120}>
             <article className="card group flex h-full flex-col overflow-hidden hover:border-accent/30">
-              <a href={p.live} target="_blank" rel="noreferrer" className="relative block overflow-hidden">
-                <div className="aspect-[16/10] overflow-hidden bg-ink-850">
-                  <img
-                    src={p.image}
-                    alt={`${p.name} screenshot`}
-                    loading="lazy"
-                    className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.04]"
-                  />
+              {p.live ? (
+                <a href={p.live} target="_blank" rel="noreferrer" className="relative block overflow-hidden">
+                  <div className="aspect-[16/10] overflow-hidden bg-ink-850">
+                    <img
+                      src={p.image}
+                      alt={`${p.name} screenshot`}
+                      loading="lazy"
+                      className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.04]"
+                    />
+                  </div>
+                  <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-ink-950/80 px-3 py-1 text-xs font-medium text-accent-soft opacity-0 backdrop-blur transition group-hover:opacity-100">
+                    Live demo <ArrowUpRight size={13} />
+                  </span>
+                </a>
+              ) : (
+                <div className="relative block overflow-hidden">
+                  <div className="aspect-[16/10] overflow-hidden bg-ink-850">
+                    <img
+                      src={p.image}
+                      alt={`${p.name} preview`}
+                      loading="lazy"
+                      className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.04]"
+                    />
+                  </div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 to-transparent opacity-0 transition group-hover:opacity-100" />
-                <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-ink-950/80 px-3 py-1 text-xs font-medium text-accent-soft opacity-0 backdrop-blur transition group-hover:opacity-100">
-                  Live demo <ArrowUpRight size={13} />
-                </span>
-              </a>
+              )}
 
               <div className="flex flex-1 flex-col p-6">
                 <h3 className="text-xl font-bold text-white">{p.name}</h3>
@@ -54,9 +66,11 @@ export default function Projects() {
                 </div>
 
                 <div className="mt-6 flex items-center gap-4 border-t border-white/10 pt-5">
-                  <a href={p.live} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sm font-semibold text-white hover:text-accent">
-                    <ExternalLink size={15} /> Live demo
-                  </a>
+                  {p.live && (
+                    <a href={p.live} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sm font-semibold text-white hover:text-accent">
+                      <ExternalLink size={15} /> Live demo
+                    </a>
+                  )}
                   <a href={p.code} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-400 hover:text-accent">
                     <Github size={15} /> Code
                   </a>
