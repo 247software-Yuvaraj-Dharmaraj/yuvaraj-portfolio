@@ -2,7 +2,7 @@
 
 My personal portfolio site — a single-page, responsive, dark-themed showcase of my experience, projects, and skills.
 
-**Live:** _deploy to Vercel and add the link here_
+**Live:** [yuvaraj-portfolio-sigma.vercel.app](https://yuvaraj-portfolio-sigma.vercel.app)
 
 ## Tech Stack
 
