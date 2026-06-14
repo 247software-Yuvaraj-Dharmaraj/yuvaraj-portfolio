@@ -100,6 +100,21 @@ export const projects: Project[] = [
     ],
   },
   {
+    name: 'FitSphere API — Spring Boot',
+    tagline: 'Java backend — full rewrite of the Node API',
+    description:
+      'A Java / Spring Boot reimplementation of the FitSphere backend on Spring Data MongoDB, preserving the exact REST contract. Built to demonstrate enterprise Java with a document datastore alongside the MERN version.',
+    image: '/projects/fitsphere-springboot.png',
+    tech: ['Java', 'Spring Boot', 'Spring Security', 'Spring Data MongoDB', 'JWT', 'Socket.IO', 'Docker'],
+    live: 'https://fitsphere-java.vercel.app',
+    code: 'https://github.com/247software-Yuvaraj-Dharmaraj/fitsphere-springboot',
+    highlights: [
+      'JWT access + refresh-token rotation with a revocable token store',
+      'Live occupancy & slot updates over Socket.IO; FIFO waitlist auto-promotion',
+      'Role-based access control (Member / Trainer / Admin) via Spring Security',
+    ],
+  },
+  {
     name: 'IncidentDesk',
     tagline: 'Incident & Request Management Tracker',
     description:
